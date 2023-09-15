@@ -4,11 +4,11 @@ import Header from "./Header";
 
 import Number from "./Number";
 
-const NumberDisplay = ({ count }) => {
+const NumberDisplay = () => {
   return (
     <div>
       <Header />
-      <Number count={count} />
+      <Number />
     </div>
   );
 };

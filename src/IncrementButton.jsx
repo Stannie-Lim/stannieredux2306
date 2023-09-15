@@ -1,13 +1,19 @@
 import React from "react";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
+import { increment, decrement } from "./store";
 
 const IncrementButton = () => {
-  const count = useSelector((state) => {
-    return state.count;
-  });
+  const dispatch = useDispatch();
 
-  return <button>{count}</button>;
+  const onClick = () => {
+    // this is like asking the librarian to do something for you
+    // it's an "action"
+    dispatch(increment());
+  };
+
+  return <button onClick={onClick}>+</button>;
 };
 
 // default export
